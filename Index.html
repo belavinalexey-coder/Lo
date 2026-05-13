@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -106,25 +105,31 @@
     /* ══════════════════════════════════════
        HERO
     ══════════════════════════════════════ */
-    .hero {
-      background:
-        url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&q=80&auto=format&fit=crop')
-        center center / cover no-repeat;
-      padding: 60px 20px 72px;
-      position: relative; overflow: hidden;
-    }
     /* ══════════════════════════════════════
-       HERO — Dark theme
+       HERO
     ══════════════════════════════════════ */
     .hero {
-      background: #2a2e2b;
+      background:
+        url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80&auto=format&fit=crop')
+        center center / cover no-repeat;
+      background-color: #2a2e2b;
       padding: 60px 20px 72px;
       position: relative; overflow: hidden;
     }
     .hero::before {
       content: '';
       position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(ellipse 70% 60% at 80% 30%, rgba(74,124,82,.12) 0%, transparent 65%);
+      background: rgba(20,30,22,.72);
+    }
+    @media(min-width:820px){
+      .hero::before {
+        background: linear-gradient(
+          108deg,
+          rgba(20,30,22,.85) 0%,
+          rgba(20,30,22,.70) 45%,
+          rgba(20,30,22,.45) 100%
+        );
+      }
     }
     .hero::after { display: none; }
     .hero-inner { position: relative; z-index: 1; text-shadow: none; }
@@ -133,7 +138,7 @@
       max-width: 1080px; margin: 0 auto;
     }
     @media(min-width:820px){
-      .hero-grid { grid-template-columns: 55fr 45fr; align-items: stretch; gap: 52px; }
+      .hero-grid { grid-template-columns: 55fr 45fr; align-items: start; gap: 52px; }
     }
 
     .hero-pill {
@@ -743,12 +748,10 @@
 
     @media(max-width:819px){ body { padding-bottom: 66px; } }
   </style>
-
 </head>
 <body>
 
   <!-- ══ HEADER ══ -->
-
   <header class="hdr">
     <div>
       <div class="hdr-logo"><span class="prof">Seva</span><span class="clean">Cleaning</span></div>
@@ -761,101 +764,96 @@
   </header>
 
   <!-- ══ HERO ══ -->
-
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-grid">
 
-```
-    <!-- Copy -->
-    <div>
-      <div class="hero-pill">
-        <span class="hero-pill-dot"></span>
-        Toronto &amp; GTA &nbsp;•&nbsp; Same-week availability
-      </div>
-      <h1>
-        Sofas &amp; Carpets.<br>
-        <span class="g">Deep Cleaned.</span><br>
-        <span class="o">Fresh Again.</span>
-      </h1>
+        <!-- Copy -->
+        <div>
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            Toronto &amp; GTA &nbsp;•&nbsp; Same-week availability
+          </div>
+          <h1>
+            Sofas &amp; Carpets.<br>
+            <span class="g">Deep Cleaned.</span><br>
+            <span class="o">Fresh Again.</span>
+          </h1>
 
-      <!-- Social proof -->
-      <div class="hero-proof">
-        <span class="hero-stars">★★★★★</span>
-        <span class="hero-proof-text"><strong>4.9</strong> from 80+ Google reviews</span>
-      </div>
-
-      <p class="hero-sub">
-        Professional sofa, upholstery, carpet, and area rug cleaning for homes and condos across Toronto. Clear quote before booking.
-      </p>
-
-      <ul class="hero-list">
-        <li><span class="hchk">✓</span>Sofa, sectional &amp; loveseat cleaning</li>
-        <li><span class="hchk">✓</span>Carpet &amp; area rug cleaning</li>
-        <li><span class="hchk">✓</span>Pet stains &amp; odour treatment</li>
-        <li><span class="hchk">✓</span>Dries in 2–4 hours</li>
-        <li><span class="hchk">✓</span>Clear quote before booking</li>
-      </ul>
-
-      <div class="hero-btns">
-        <a href="#quote" class="btn-o">Get My Free Quote</a>
-        <a href="tel:+14168564244" class="btn-ghost">
-          📞 (416) 856-4244
-        </a>
-      </div>
-    </div>
-
-    <!-- Form -->
-    <div class="fcard" id="quote">
-      <div class="fcard-head">
-        <h3>Get Your Free Quote</h3>
-        <p>Describe what needs cleaning — we'll confirm pricing and book you in.</p>
-      </div>
-      <div class="fcard-body">
-        <form id="lead-form" novalidate>
-
-          <div class="fg">
-            <label for="fphone">Phone Number</label>
-            <input id="fphone" class="fc" type="tel" placeholder="(416) 000-0000" required />
+          <!-- Social proof -->
+          <div class="hero-proof">
+            <span class="hero-stars">★★★★★</span>
+            <span class="hero-proof-text"><strong>4.9</strong> from 80+ Google reviews</span>
           </div>
 
-          <div class="fg">
-            <label for="fpostal">Postal Code</label>
-            <input id="fpostal" class="fc" type="text" placeholder="M5V, M4Y, M6H…" maxlength="7" required />
+          <p class="hero-sub">
+            Professional sofa, upholstery, carpet, and area rug cleaning for homes and condos across Toronto. Clear quote before booking.
+          </p>
+
+          <ul class="hero-list">
+            <li><span class="hchk">✓</span>Sofa, sectional &amp; loveseat cleaning</li>
+            <li><span class="hchk">✓</span>Carpet &amp; area rug cleaning</li>
+            <li><span class="hchk">✓</span>Pet stains &amp; odour treatment</li>
+            <li><span class="hchk">✓</span>Dries in 2–4 hours</li>
+            <li><span class="hchk">✓</span>Clear quote before booking</li>
+          </ul>
+
+          <div class="hero-btns">
+            <a href="#quote" class="btn-o">Get My Free Quote</a>
+            <a href="tel:+14168564244" class="btn-ghost">
+              📞 (416) 856-4244
+            </a>
           </div>
-
-          <div class="fg">
-            <label for="femail">Email Address <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted2)">(optional)</span></label>
-            <input id="femail" class="fc" type="email" placeholder="you@example.com" />
-          </div>
-
-          <div class="fg">
-            <label for="fwhat">What would you like cleaned?</label>
-            <textarea id="fwhat" class="fc"
-              placeholder="e.g. 3-seat sofa, sectional, area rug, carpeted stairs, pet stains…"
-              style="resize:none" required></textarea>
-          </div>
-
-          <button type="submit" class="btn-submit">GET MY FREE QUOTE →</button>
-          <p class="fnote">No obligation. We'll contact you with the next step.</p>
-
-        </form>
-        <div class="fsuccess" id="fsuccess">
-          <div class="fsuccess-ico">✅</div>
-          <h3>Request Received</h3>
-          <p>We'll be in touch to confirm your quote.<br>Or call us: <a href="tel:+14168564244" style="color:var(--green);font-weight:700">(416) 856-4244</a></p>
         </div>
+
+        <!-- Form -->
+        <div class="fcard" id="quote">
+          <div class="fcard-head">
+            <h3>Get Your Free Quote</h3>
+            <p>Describe what needs cleaning — we'll confirm pricing and book you in.</p>
+          </div>
+          <div class="fcard-body">
+            <form id="lead-form" novalidate>
+
+              <div class="fg">
+                <label for="fphone">Phone Number</label>
+                <input id="fphone" class="fc" type="tel" placeholder="(416) 000-0000" required />
+              </div>
+
+              <div class="fg">
+                <label for="fpostal">Postal Code</label>
+                <input id="fpostal" class="fc" type="text" placeholder="M5V, M4Y, M6H…" maxlength="7" required />
+              </div>
+
+              <div class="fg">
+                <label for="femail">Email Address <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted2)">(optional)</span></label>
+                <input id="femail" class="fc" type="email" placeholder="you@example.com" />
+              </div>
+
+              <div class="fg">
+                <label for="fwhat">What would you like cleaned?</label>
+                <textarea id="fwhat" class="fc"
+                  placeholder="e.g. 3-seat sofa, sectional, area rug, carpeted stairs, pet stains…"
+                  style="resize:none" required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">GET MY FREE QUOTE →</button>
+              <p class="fnote">No obligation. We'll contact you with the next step.</p>
+
+            </form>
+            <div class="fsuccess" id="fsuccess">
+              <div class="fsuccess-ico">✅</div>
+              <h3>Request Received</h3>
+              <p>We'll be in touch to confirm your quote.<br>Or call us: <a href="tel:+14168564244" style="color:var(--green);font-weight:700">(416) 856-4244</a></p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-
-  </div>
-</div>
-```
-
   </section>
 
   <!-- ══ TRUST BAR ══ -->
-
   <div class="trust">
     <div class="trust-inner">
       <div class="ti">⭐ 4.9 Google Rating</div>
@@ -871,7 +869,6 @@
   </div>
 
   <!-- ══ SERVICES ══ -->
-
   <section class="services">
     <div class="wrap">
       <div class="shead fu">
@@ -881,53 +878,49 @@
       </div>
       <div class="svc-grid">
 
-```
-    <div class="svc-card fu">
-      <div class="svc-icon">🛋️</div>
-      <h3>Upholstery Cleaning</h3>
-      <p>Deep cleaning for all fabric furniture. We remove stains, allergens, pet hair, and odours — leaving your sofa looking and smelling like new.</p>
-      <ul class="svc-list">
-        <li><span class="li-left">3-Seater Sofa / Couch</span><span class="ptag">from $149</span></li>
-        <li><span class="li-left">Loveseat</span><span class="ptag">from $119</span></li>
-        <li><span class="li-left">Armchair</span><span class="ptag">from $49</span></li>
-        <li><span class="li-left">Sectional — price on quote</span></li>
-        <li><span class="li-left">Pet Hair &amp; Odour Treatment</span></li>
-        <li><span class="li-left">Stain Pre-Treatment Included</span></li>
-      </ul>
-      <a href="#quote" class="svc-link">Get a free quote →</a>
+        <div class="svc-card fu">
+          <div class="svc-icon">🛋️</div>
+          <h3>Upholstery Cleaning</h3>
+          <p>Deep cleaning for all fabric furniture. We remove stains, allergens, pet hair, and odours — leaving your sofa looking and smelling like new.</p>
+          <ul class="svc-list">
+            <li><span class="li-left">3-Seater Sofa / Couch</span><span class="ptag">from $149</span></li>
+            <li><span class="li-left">Loveseat</span><span class="ptag">from $119</span></li>
+            <li><span class="li-left">Armchair</span><span class="ptag">from $49</span></li>
+            <li><span class="li-left">Sectional — price on quote</span></li>
+            <li><span class="li-left">Pet Hair &amp; Odour Treatment</span></li>
+            <li><span class="li-left">Stain Pre-Treatment Included</span></li>
+          </ul>
+          <a href="#quote" class="svc-link">Get a free quote →</a>
+        </div>
+
+        <div class="svc-card fu">
+          <div class="svc-icon">🟫</div>
+          <h3>Carpet &amp; Area Rug Cleaning</h3>
+          <p>Hot water extraction pulls out deep-set dirt, allergens, and stains from wall-to-wall carpet and rugs — no over-wetting, fast dry times.</p>
+          <ul class="svc-list">
+            <li><span class="li-left">Wall-to-Wall Carpet Cleaning</span><span class="ptag">from $69</span></li>
+            <li><span class="li-left">Area Rug Cleaning</span><span class="ptag">from $49</span></li>
+            <li><span class="li-left">Stairs &amp; Hallway Carpet</span><span class="ptag">$6 / step</span></li>
+            <li><span class="li-left">Pet Urine &amp; Odour Neutralization</span></li>
+            <li><span class="li-left">High-Traffic Area Treatment</span></li>
+            <li><span class="li-left">Stain Pre-Treatment Included</span></li>
+          </ul>
+          <a href="#quote" class="svc-link">Get a free quote →</a>
+        </div>
+
+      </div>
+
+      <!-- Standalone price guarantee -->
+      <div class="price-guarantee fu">
+        <span class="pg-line"></span>
+        <span>Exact price confirmed before booking</span>
+        <span class="pg-line"></span>
+      </div>
+
     </div>
-
-    <div class="svc-card fu">
-      <div class="svc-icon">🟫</div>
-      <h3>Carpet &amp; Area Rug Cleaning</h3>
-      <p>Hot water extraction pulls out deep-set dirt, allergens, and stains from wall-to-wall carpet and rugs — no over-wetting, fast dry times.</p>
-      <ul class="svc-list">
-        <li><span class="li-left">Wall-to-Wall Carpet Cleaning</span><span class="ptag">from $69</span></li>
-        <li><span class="li-left">Area Rug Cleaning</span><span class="ptag">from $49</span></li>
-        <li><span class="li-left">Stairs &amp; Hallway Carpet</span><span class="ptag">$6 / step</span></li>
-        <li><span class="li-left">Pet Urine &amp; Odour Neutralization</span></li>
-        <li><span class="li-left">High-Traffic Area Treatment</span></li>
-        <li><span class="li-left">Stain Pre-Treatment Included</span></li>
-      </ul>
-      <a href="#quote" class="svc-link">Get a free quote →</a>
-    </div>
-
-  </div>
-
-  <!-- Standalone price guarantee -->
-  <div class="price-guarantee fu">
-    <span class="pg-line"></span>
-    <span>Exact price confirmed before booking</span>
-    <span class="pg-line"></span>
-  </div>
-
-</div>
-```
-
   </section>
 
   <!-- ══ WHY US ══ -->
-
   <section class="why">
     <div class="wrap">
       <div class="shead fu">
@@ -971,7 +964,6 @@
   </section>
 
   <!-- ══ BEFORE / AFTER ══ -->
-
   <section class="ba">
     <div class="wrap">
       <div class="shead fu">
@@ -980,85 +972,81 @@
         <p class="ssub">Drag the slider to see the difference. Real results from our Toronto clients.</p>
       </div>
 
-```
-  <div class="ba-tabs fu">
-    <button class="ba-tab active" data-panel="sofas">🛋️ Sofas &amp; Couches</button>
-    <button class="ba-tab"        data-panel="carpets">🟫 Carpets &amp; Rugs</button>
-  </div>
+      <div class="ba-tabs fu">
+        <button class="ba-tab active" data-panel="sofas">🛋️ Sofas &amp; Couches</button>
+        <button class="ba-tab"        data-panel="carpets">🟫 Carpets &amp; Rugs</button>
+      </div>
 
-  <div class="ba-panel active" id="panel-sofas">
-    <div class="ba-grid">
-      <div class="ba-card fu">
-        <div class="ba-card-top">
-          <span>3-seat sofa · Pet stain removal</span>
-          <span class="ba-hint">↔ drag</span>
-        </div>
-        <div class="ba-slider" data-slider>
-          <div class="ba-before img-sofa-b"></div>
-          <div class="ba-after img-sofa-a"></div>
-          <div class="ba-line"><div class="ba-knob">↔</div></div>
-          <span class="ba-lbl lbl-b">Before</span>
-          <span class="ba-lbl lbl-a">After</span>
+      <div class="ba-panel active" id="panel-sofas">
+        <div class="ba-grid">
+          <div class="ba-card fu">
+            <div class="ba-card-top">
+              <span>3-seat sofa · Pet stain removal</span>
+              <span class="ba-hint">↔ drag</span>
+            </div>
+            <div class="ba-slider" data-slider>
+              <div class="ba-before img-sofa-b"></div>
+              <div class="ba-after img-sofa-a"></div>
+              <div class="ba-line"><div class="ba-knob">↔</div></div>
+              <span class="ba-lbl lbl-b">Before</span>
+              <span class="ba-lbl lbl-a">After</span>
+            </div>
+          </div>
+          <div class="ba-card fu">
+            <div class="ba-card-top">
+              <span>Sectional · Coffee &amp; dust buildup</span>
+              <span class="ba-hint">↔ drag</span>
+            </div>
+            <div class="ba-slider" data-slider>
+              <div class="ba-before img-sofa-b" style="filter:hue-rotate(12deg) brightness(.91)"></div>
+              <div class="ba-after img-sofa-a"  style="filter:brightness(1.04)"></div>
+              <div class="ba-line"><div class="ba-knob">↔</div></div>
+              <span class="ba-lbl lbl-b">Before</span>
+              <span class="ba-lbl lbl-a">After</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="ba-card fu">
-        <div class="ba-card-top">
-          <span>Sectional · Coffee &amp; dust buildup</span>
-          <span class="ba-hint">↔ drag</span>
+
+      <div class="ba-panel" id="panel-carpets">
+        <div class="ba-grid">
+          <div class="ba-card fu">
+            <div class="ba-card-top">
+              <span>Living room carpet · High-traffic area</span>
+              <span class="ba-hint">↔ drag</span>
+            </div>
+            <div class="ba-slider" data-slider>
+              <div class="ba-before img-carpet-b"></div>
+              <div class="ba-after img-carpet-a"></div>
+              <div class="ba-line"><div class="ba-knob">↔</div></div>
+              <span class="ba-lbl lbl-b">Before</span>
+              <span class="ba-lbl lbl-a">After</span>
+            </div>
+          </div>
+          <div class="ba-card fu">
+            <div class="ba-card-top">
+              <span>Area rug · Pet urine &amp; odour</span>
+              <span class="ba-hint">↔ drag</span>
+            </div>
+            <div class="ba-slider" data-slider>
+              <div class="ba-before img-carpet-b" style="filter:hue-rotate(-14deg) brightness(.87)"></div>
+              <div class="ba-after img-carpet-a"  style="filter:brightness(1.07) saturate(.88)"></div>
+              <div class="ba-line"><div class="ba-knob">↔</div></div>
+              <span class="ba-lbl lbl-b">Before</span>
+              <span class="ba-lbl lbl-a">After</span>
+            </div>
+          </div>
         </div>
-        <div class="ba-slider" data-slider>
-          <div class="ba-before img-sofa-b" style="filter:hue-rotate(12deg) brightness(.91)"></div>
-          <div class="ba-after img-sofa-a"  style="filter:brightness(1.04)"></div>
-          <div class="ba-line"><div class="ba-knob">↔</div></div>
-          <span class="ba-lbl lbl-b">Before</span>
-          <span class="ba-lbl lbl-a">After</span>
-        </div>
+      </div>
+
+      <div class="ba-footer fu">
+        <p>Want results like this at your home?</p>
+        <a href="#quote" class="btn-o" style="display:inline-flex">📋 &nbsp;Get a Free Quote →</a>
       </div>
     </div>
-  </div>
-
-  <div class="ba-panel" id="panel-carpets">
-    <div class="ba-grid">
-      <div class="ba-card fu">
-        <div class="ba-card-top">
-          <span>Living room carpet · High-traffic area</span>
-          <span class="ba-hint">↔ drag</span>
-        </div>
-        <div class="ba-slider" data-slider>
-          <div class="ba-before img-carpet-b"></div>
-          <div class="ba-after img-carpet-a"></div>
-          <div class="ba-line"><div class="ba-knob">↔</div></div>
-          <span class="ba-lbl lbl-b">Before</span>
-          <span class="ba-lbl lbl-a">After</span>
-        </div>
-      </div>
-      <div class="ba-card fu">
-        <div class="ba-card-top">
-          <span>Area rug · Pet urine &amp; odour</span>
-          <span class="ba-hint">↔ drag</span>
-        </div>
-        <div class="ba-slider" data-slider>
-          <div class="ba-before img-carpet-b" style="filter:hue-rotate(-14deg) brightness(.87)"></div>
-          <div class="ba-after img-carpet-a"  style="filter:brightness(1.07) saturate(.88)"></div>
-          <div class="ba-line"><div class="ba-knob">↔</div></div>
-          <span class="ba-lbl lbl-b">Before</span>
-          <span class="ba-lbl lbl-a">After</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ba-footer fu">
-    <p>Want results like this at your home?</p>
-    <a href="#quote" class="btn-o" style="display:inline-flex">📋 &nbsp;Get a Free Quote →</a>
-  </div>
-</div>
-```
-
   </section>
 
   <!-- ══ REVIEWS ══ -->
-
   <section class="reviews">
     <div class="wrap">
       <div class="shead fu">
@@ -1074,62 +1062,58 @@
       </div>
       <div class="rv-grid">
 
-```
-    <div class="rv-card fu">
-      <div class="stars">★★★★★</div>
-      <p class="rv-text">My sectional looks brand new. I had a pet stain I thought was permanent — completely gone. I'd recommend SevaCleaning to anyone with dogs or cats at home.</p>
-      <div class="rv-person">
-        <div class="rv-av">M</div>
-        <div class="rv-info">
-          <strong>Marina K.</strong>
-          <span>North York · Google Review</span>
+        <div class="rv-card fu">
+          <div class="stars">★★★★★</div>
+          <p class="rv-text">My sectional looks brand new. I had a pet stain I thought was permanent — completely gone. I'd recommend SevaCleaning to anyone with dogs or cats at home.</p>
+          <div class="rv-person">
+            <div class="rv-av">M</div>
+            <div class="rv-info">
+              <strong>Marina K.</strong>
+              <span>North York · Google Review</span>
+            </div>
+          </div>
         </div>
+
+        <div class="rv-card fu">
+          <div class="stars">★★★★★</div>
+          <p class="rv-text">Easy to book, arrived on time, explained everything before starting. My carpet looks incredible — I forgot it was actually beige underneath. Will book again.</p>
+          <div class="rv-person">
+            <div class="rv-av">D</div>
+            <div class="rv-info">
+              <strong>David T.</strong>
+              <span>Downtown Toronto · Google Review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rv-card fu">
+          <div class="stars">★★★★★</div>
+          <p class="rv-text">Booked online on Monday, they came Wednesday. My light grey sofa had two years of pet hair and a wine stain I'd given up on. Came out looking brand new. Couldn't be happier.</p>
+          <div class="rv-person">
+            <div class="rv-av">S</div>
+            <div class="rv-info">
+              <strong>Sarah M.</strong>
+              <span>Etobicoke · Google Review</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="rv-src fu">
+        <span class="rv-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          Verified on Google Business Profile
+        </span>
       </div>
     </div>
-
-    <div class="rv-card fu">
-      <div class="stars">★★★★★</div>
-      <p class="rv-text">Easy to book, arrived on time, explained everything before starting. My carpet looks incredible — I forgot it was actually beige underneath. Will book again.</p>
-      <div class="rv-person">
-        <div class="rv-av">D</div>
-        <div class="rv-info">
-          <strong>David T.</strong>
-          <span>Downtown Toronto · Google Review</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="rv-card fu">
-      <div class="stars">★★★★★</div>
-      <p class="rv-text">Booked online on Monday, they came Wednesday. My light grey sofa had two years of pet hair and a wine stain I'd given up on. Came out looking brand new. Couldn't be happier.</p>
-      <div class="rv-person">
-        <div class="rv-av">S</div>
-        <div class="rv-info">
-          <strong>Sarah M.</strong>
-          <span>Etobicoke · Google Review</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <div class="rv-src fu">
-    <span class="rv-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-      </svg>
-      Verified on Google Business Profile
-    </span>
-  </div>
-</div>
-```
-
   </section>
 
   <!-- ══ FAQ ══ -->
-
   <section class="faq">
     <div class="wrap">
       <div class="shead fu">
@@ -1138,45 +1122,41 @@
       </div>
       <div class="faq-list">
 
-```
-    <div class="faq-item fu">
-      <button class="faq-q">How long does the cleaning take?<div class="faq-ico">+</div></button>
-      <div class="faq-a">Most jobs take 1–3 hours depending on size. A single sofa is about 45–60 minutes. We give you a time estimate when we confirm your booking.</div>
+        <div class="faq-item fu">
+          <button class="faq-q">How long does the cleaning take?<div class="faq-ico">+</div></button>
+          <div class="faq-a">Most jobs take 1–3 hours depending on size. A single sofa is about 45–60 minutes. We give you a time estimate when we confirm your booking.</div>
+        </div>
+
+        <div class="faq-item fu">
+          <button class="faq-q">How long until it's dry?<div class="faq-ico">+</div></button>
+          <div class="faq-a">Most furniture and carpet dries in 2–4 hours. Our equipment removes most of the moisture during cleaning — no soggy cushions or wet floors left behind.</div>
+        </div>
+
+        <div class="faq-item fu">
+          <button class="faq-q">Is it safe for my kids and pets?<div class="faq-ico">+</div></button>
+          <div class="faq-a">Yes. We use non-toxic, low-residue solutions safe for children and animals. Once dry, your furniture and carpet are completely safe to use.</div>
+        </div>
+
+        <div class="faq-item fu">
+          <button class="faq-q">Can you remove pet stains and odours?<div class="faq-ico">+</div></button>
+          <div class="faq-a">In most cases, yes. We use enzyme-based treatments for pet urine and odour neutralization. We'll be honest with you about expected results before we start.</div>
+        </div>
+
+        <div class="faq-item fu">
+          <button class="faq-q">How do I get an exact price?<div class="faq-ico">+</div></button>
+          <div class="faq-a">Fill in the quote form or give us a call. We'll ask a few simple questions and give you a clear price upfront — no surprises on the day.</div>
+        </div>
+
+        <div class="faq-item fu">
+          <button class="faq-q">Do you serve all of Toronto and GTA?<div class="faq-ico">+</div></button>
+          <div class="faq-a">Yes — Toronto, North York, Etobicoke, Scarborough, Mississauga, Brampton, Vaughan, Markham, and surrounding areas. Not sure? Just ask, we'll confirm right away.</div>
+        </div>
+
+      </div>
     </div>
-
-    <div class="faq-item fu">
-      <button class="faq-q">How long until it's dry?<div class="faq-ico">+</div></button>
-      <div class="faq-a">Most furniture and carpet dries in 2–4 hours. Our equipment removes most of the moisture during cleaning — no soggy cushions or wet floors left behind.</div>
-    </div>
-
-    <div class="faq-item fu">
-      <button class="faq-q">Is it safe for my kids and pets?<div class="faq-ico">+</div></button>
-      <div class="faq-a">Yes. We use non-toxic, low-residue solutions safe for children and animals. Once dry, your furniture and carpet are completely safe to use.</div>
-    </div>
-
-    <div class="faq-item fu">
-      <button class="faq-q">Can you remove pet stains and odours?<div class="faq-ico">+</div></button>
-      <div class="faq-a">In most cases, yes. We use enzyme-based treatments for pet urine and odour neutralization. We'll be honest with you about expected results before we start.</div>
-    </div>
-
-    <div class="faq-item fu">
-      <button class="faq-q">How do I get an exact price?<div class="faq-ico">+</div></button>
-      <div class="faq-a">Fill in the quote form or give us a call. We'll ask a few simple questions and give you a clear price upfront — no surprises on the day.</div>
-    </div>
-
-    <div class="faq-item fu">
-      <button class="faq-q">Do you serve all of Toronto and GTA?<div class="faq-ico">+</div></button>
-      <div class="faq-a">Yes — Toronto, North York, Etobicoke, Scarborough, Mississauga, Brampton, Vaughan, Markham, and surrounding areas. Not sure? Just ask, we'll confirm right away.</div>
-    </div>
-
-  </div>
-</div>
-```
-
   </section>
 
   <!-- ══ FINAL CTA ══ -->
-
   <section class="fcta">
     <div class="wrap">
       <div class="fcta-pill fu">🟢 Same-Week Availability</div>
@@ -1190,7 +1170,6 @@
   </section>
 
   <!-- ══ FOOTER ══ -->
-
   <footer class="footer">
     <div class="footer-brand">© 2025 SevaCleaning · Upholstery &amp; Carpet Cleaning</div>
     <div class="footer-links">
@@ -1204,11 +1183,11 @@
   </footer>
 
   <!-- ══ STICKY MOBILE CTA ══ -->
-
   <div class="sticky">
     <a href="tel:+14168564244" class="stk-btn stk-call">📞 Call Now</a>
     <a href="#quote"           class="stk-btn stk-quote">📋 Free Quote</a>
   </div>
+
 
   <script>
     /* ── Form submit ── */

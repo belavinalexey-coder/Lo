@@ -845,22 +845,23 @@
                 <label for="fwhat">What would you like cleaned?</label>
                 <textarea id="fwhat" class="fc"
                   placeholder="e.g. 3-seat sofa, sectional, area rug, carpeted stairs, pet stains…"
+                  autocomplete="off"
                   style="resize:none;min-height:90px" required></textarea>
               </div>
 
               <div class="fg">
                 <label for="fpostal">Postal Code</label>
-                <input id="fpostal" class="fc" type="text" placeholder="M5V, M4Y, M6H…" maxlength="7" required />
+                <input id="fpostal" class="fc" type="text" placeholder="M5V, M4Y, M6H…" maxlength="7" autocomplete="postal-code" required />
               </div>
 
               <div class="fg">
                 <label for="femail">Email Address</label>
-                <input id="femail" class="fc" type="email" placeholder="you@example.com" required />
+                <input id="femail" class="fc" type="email" placeholder="you@example.com" autocomplete="email" required />
               </div>
 
               <div class="fg">
                 <label for="fphone">Phone Number</label>
-                <input id="fphone" class="fc" type="tel" placeholder="(416) 000-0000" required />
+                <input id="fphone" class="fc" type="tel" placeholder="(416) 000-0000" autocomplete="tel" required />
               </div>
 
               <button type="submit" class="btn-submit">GET MY FREE QUOTE →</button>
@@ -1319,4 +1320,3 @@
 
 </body>
 </html>
- 

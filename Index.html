@@ -6,9 +6,15 @@
   <title>Sofa & Carpet Cleaning Toronto | SevaCleaning — Same-Week Service</title>
   <meta name="description" content="Professional sofa, couch, sectional & carpet cleaning in Toronto and GTA. Fast drying, child & pet safe, no harsh chemicals. Get a free quote in 60 seconds." />
 
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <!-- Non-render-blocking font loading — biggest mobile performance win -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap" /></noscript>
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=75&auto=format&fit=crop&fm=webp" fetchpriority="high" />
 
   <style>
     /* ══════════════════════════════════════
@@ -110,7 +116,7 @@
     ══════════════════════════════════════ */
     .hero {
       background:
-        url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80&auto=format&fit=crop')
+        url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=75&auto=format&fit=crop&fm=webp')
         center center / cover no-repeat;
       background-color: #2a2e2b;
       padding: 60px 20px 72px;
@@ -260,9 +266,7 @@
     .fc:focus { border-color: var(--green); background: #fff; box-shadow: 0 0 0 3px var(--green-xl); }
     .fc::placeholder { color: var(--muted2); }
     select.fc { cursor: pointer; }
-    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
-    .btn-submit {
+.btn-submit {
       width: 100%; background: var(--orange); color: #fff;
       border: none; cursor: pointer; padding: 15px; border-radius: 30px;
       font-family: 'Montserrat', sans-serif; font-size: 14.5px; font-weight: 800;
@@ -275,38 +279,7 @@
 
     .fnote { text-align: center; font-size: 11.5px; color: var(--muted2); margin-top: 10px; }
 
-    /* Contact method toggle */
-    .contact-toggle {
-      display: flex; gap: 8px; flex-wrap: wrap;
-    }
-    .ct-btn {
-      flex: 1; min-width: 80px;
-      padding: 10px 8px; border-radius: 9px;
-      font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700;
-      border: 1.5px solid var(--border);
-      background: var(--bg); color: var(--muted); cursor: pointer;
-      transition: all .18s; text-align: center;
-    }
-    .ct-btn:hover { border-color: var(--green); color: var(--green); }
-    .ct-btn.active {
-      background: var(--green); color: #fff;
-      border-color: var(--green);
-      box-shadow: 0 2px 10px rgba(74,124,82,.25);
-    }
 
-    /* Photo upload */
-    .upload-btn {
-      display: flex; align-items: center; gap: 10px;
-      width: 100%; padding: 12px 14px;
-      background: var(--bg); border: 1.5px dashed var(--border2);
-      border-radius: 9px; cursor: pointer;
-      transition: border-color .18s, background .18s;
-      color: var(--muted);
-    }
-    .upload-btn:hover { border-color: var(--green); background: var(--green-xl); color: var(--green2); }
-    .upload-btn.has-file { border-color: var(--green); background: var(--green-xl); color: var(--green2); border-style: solid; }
-    .upload-icon { font-size: 18px; flex-shrink: 0; }
-    .upload-text { font-size: 13.5px; font-weight: 600; font-family: 'Montserrat', sans-serif; }
 
     /* Success */
     .fsuccess { display: none; text-align: center; padding: 34px 16px; }
@@ -725,13 +698,13 @@
       text-align: center; border-top: 1px solid rgba(255,255,255,.06);
       display: flex; flex-direction: column; gap: 6px;
     }
-    .footer-brand { font-size: 12px; color: rgba(255,255,255,.4); font-weight: 600; }
+    .footer-brand { font-size: 12px; color: rgba(255,255,255,.65); font-weight: 600; }
     .footer-links {
       display: flex; flex-wrap: wrap; align-items: center;
       justify-content: center; gap: 4px 8px;
       font-size: 12px;
     }
-    .footer-links a { color: rgba(255,255,255,.45); }
+    .footer-links a { color: rgba(255,255,255,.72); }
     .footer-links a:hover { color: #7dcb8a; }
     .footer-sep { color: rgba(255,255,255,.2); }
     .footer-areas { display: none; }
@@ -761,8 +734,8 @@
       border: none; cursor: pointer;
       display: flex; align-items: center; justify-content: center; gap: 7px;
     }
-    .stk-call  { background: var(--green); color: #fff; }
-    .stk-quote { background: var(--orange); color: #fff; }
+    .stk-call  { background: var(--green2); color: #fff; }
+    .stk-quote { background: var(--orange2); color: #fff; }
 
     /* ══════════════════════════════════════
        ANIMATIONS
@@ -774,12 +747,18 @@
   </style>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>emailjs.init('PS7ECsfdDn23O94Go');</script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NJ4N379Z');</script>
+  <!-- Google Tag Manager — deferred for performance -->
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NJ4N379Z');
+      }, 1500);
+    });
+  </script>
   <!-- End Google Tag Manager -->
 </head>
 <body>
@@ -801,6 +780,7 @@
   </header>
 
   <!-- ══ HERO ══ -->
+  <main>
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-grid">
@@ -846,7 +826,7 @@
         <!-- Form -->
         <div class="fcard" id="quote">
           <div class="fcard-head">
-            <h3>Get Your Free Quote</h3>
+            <h2 style="font-size:16px;color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.7px">Get Your Free Quote</h2>
             <p>Describe what needs cleaning — we'll confirm pricing and book you in.</p>
           </div>
           <div class="fcard-body">
@@ -881,7 +861,7 @@
             </form>
             <div class="fsuccess" id="fsuccess">
               <div class="fsuccess-ico">✅</div>
-              <h3>Request Received</h3>
+              <h2 style="font-size:18px;text-transform:uppercase">Request Received</h2>
               <p>We'll be in touch to confirm your quote.<br>Or call us: <a href="tel:+14168564244" style="color:var(--green);font-weight:700">(416) 856-4244</a></p>
             </div>
           </div>
@@ -1120,32 +1100,32 @@
       <div class="why-grid">
         <div class="why-card fu">
           <div class="why-ico">🎯</div>
-          <h4>Soft Surface Specialists</h4>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.3px;margin-bottom:8px">Soft Surface Specialists</h3>
           <p>We only clean upholstery and carpets. Deep expertise in fabrics and fibres — not a one-size-fits-all approach.</p>
         </div>
         <div class="why-card fu">
           <div class="why-ico">⚡</div>
-          <h4>Dries Same Day</h4>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.3px;margin-bottom:8px">Dries Same Day</h3>
           <p>Our equipment extracts most moisture during cleaning. Most furniture is dry in 2–4 hours — not 2 days.</p>
         </div>
         <div class="why-card fu">
           <div class="why-ico">🧴</div>
-          <h4>Safe for Kids &amp; Pets</h4>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.3px;margin-bottom:8px">Safe for Kids &amp; Pets</h3>
           <p>Non-toxic, low-residue solutions. Safe for the whole household once dry, including the most sensitive family members.</p>
         </div>
         <div class="why-card fu">
           <div class="why-ico">💬</div>
-          <h4>Upfront Pricing</h4>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.3px;margin-bottom:8px">Upfront Pricing</h3>
           <p>We quote before we start. No surprises on the day, no upsells at the door. The agreed price is what you pay.</p>
         </div>
         <div class="why-card fu">
           <div class="why-ico">🏠</div>
-          <h4>Local Toronto Team</h4>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.3px;margin-bottom:8px">Local Toronto Team</h3>
           <p>We live here. We know the GTA, we respond quickly, and we treat your home like our own.</p>
         </div>
         <div class="why-card fu">
           <div class="why-ico">📅</div>
-          <h4>Same-Week Appointments</h4>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.3px;margin-bottom:8px">Same-Week Appointments</h3>
           <p>No 3-week waits. Flexible scheduling including evenings and Saturdays to fit around your life.</p>
         </div>
       </div>
@@ -1207,6 +1187,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ══ FOOTER ══ -->
   <footer class="footer">

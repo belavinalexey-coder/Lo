@@ -1,15 +1,5 @@
 {
-  "version": 2,
-  "routes": [
-    { "src": "/robots.txt", "dest": "/robots.txt" },
-    { "src": "/beforeandafter_1.JPG", "dest": "/beforeandafter_1.JPG" },
-    { "src": "/beforeandafter_11.JPG", "dest": "/beforeandafter_11.JPG" },
-    { "src": "/beforeandafter_2.JPG", "dest": "/beforeandafter_2.JPG" },
-    { "src": "/beforeandafter_22.JPG", "dest": "/beforeandafter_22.JPG" },
-    { "src": "/beforeandafter_3.JPG", "dest": "/beforeandafter_3.JPG" },
-    { "src": "/beforeandafter_33.JPG", "dest": "/beforeandafter_33.JPG" },
-    { "src": "/beforeandafter_4.JPG", "dest": "/beforeandafter_4.JPG" },
-    { "src": "/beforeandafter_44.JPG", "dest": "/beforeandafter_44.JPG" },
-    { "src": "/(.*)", "dest": "/Index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/Index.html" }
   ]
 }
